@@ -143,19 +143,6 @@ Local development is covered above. For production you can:
 - Deploy the API to a Node host (Render, Railway, DigitalOcean App Platform). Make sure to set `MONGODB_URI` in the host's environment settings.
 - Optionally combine by serving the frontend build from the Express server and running the combined app on a single host.
 
-## 🤝 Contributing
-
-Contributions are welcome — small improvements, bug fixes, styling, and documentation all help!
-
-How to contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/awesome`)
-3. Commit your changes (`git commit -m "Add awesome feature"`)
-4. Push (`git push origin feature/awesome`)
-5. Open a Pull Request
-
-Please follow the guidelines in `CONTRIBUTING.md`.
 
 ## 🙏 Acknowledgments
 
@@ -167,5 +154,3 @@ Please follow the guidelines in `CONTRIBUTING.md`.
 ---
 
 If you found this project helpful, please give it a star ⭐
-
-Made with ❤️ by the project contributors
