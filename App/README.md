@@ -1,4 +1,4 @@
-# MERN To-Do App
+# TaskFlow
 
 A full-stack To-Do application built with the MERN stack (MongoDB, Express.js, React, Node.js). This app allows users to add and delete tasks with a clean, minimal interface designed for desktop use.
 
@@ -216,10 +216,4 @@ lsof -ti:5000 | xargs kill -9
 lsof -ti:3000 | xargs kill -9
 ```
 
-## 📄 License
 
-MIT License
-
-## 👨‍💻 Author
-
-Built with the MERN stack
