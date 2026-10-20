@@ -1,4 +1,4 @@
-# MERN Todo List (Basic)
+# TaskFlow (Basic)
 
 A minimal Todo app using the MERN stack:
 
@@ -8,7 +8,7 @@ A minimal Todo app using the MERN stack:
 
 No external URLs/APIs are used.
 
-# MERN Todo List
+# TaskFlow
 
 A minimal, well-documented To‑Do application built with the MERN stack (React + Vite frontend, Express backend, MongoDB database). This repository contains a small, production-ready example you can run locally or deploy.
 
