@@ -58,7 +58,12 @@ function App() {
    * Example: [{ _id: "123", text: "Buy milk", createdAt: "..." }]
    */
   const [todos, setTodos] = useState<Todo[]>([]);
-
+  const completedCount = todos.filter((todo) => todo.completed).length;
+  const pendingCount = todos.length - completedCount;
+  const completionPercentage =
+  todos.length === 0
+    ? 0
+    : Math.round((completedCount / todos.length) * 100);
   /**
    * inputText: Current value of the input field where user types new todos
    * setInputText: Function to update inputText
@@ -90,6 +95,35 @@ function App() {
   const [dueDateInput, setDueDateInput] = useState<string>("");
   const [recurrenceInput, setRecurrenceInput] = useState<'none' | 'daily' | 'weekly' | 'monthly'>('none');
   const [showAnalytics, setShowAnalytics] = useState(false);
+  
+{todos.length > 0 && (
+  <div className="mt-6 rounded-lg bg-white p-5 shadow-md">
+    <div className="mb-3 flex justify-between text-sm font-medium text-slate-700">
+      <span>Task Progress</span>
+      <span>{completionPercentage}% complete</span>
+    </div>
+
+    <div
+      className="h-3 w-full overflow-hidden rounded-full bg-slate-200"
+      role="progressbar"
+      aria-label="Task completion progress"
+      aria-valuenow={completionPercentage}
+      aria-valuemin={0}
+      aria-valuemax={100}
+    >
+      <div
+        className="h-full rounded-full bg-blue-600 transition-all duration-300"
+        style={{ width: `${completionPercentage}%` }}
+      />
+    </div>
+
+    <div className="mt-3 flex justify-between text-sm text-slate-600">
+      <span>Completed: {completedCount}</span>
+      <span>Pending: {pendingCount}</span>
+    </div>
+  </div>
+)}
+
   const [analytics, setAnalytics] = useState<{ total: number; completed: number; completionRate: number; averageTimeToCompleteMs: number; dailyCompletionStreak: number; } | null>(null);
   const [showCalendar, setShowCalendar] = useState(false);
   const [toast, setToast] = useState<string>("");
